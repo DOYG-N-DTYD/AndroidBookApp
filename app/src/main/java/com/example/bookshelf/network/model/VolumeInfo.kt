@@ -3,7 +3,7 @@ package com.example.bookshelf.network.model
 data class VolumeInfo(
     val allowAnonLogging: Boolean,
     val authors: List<String>,
-    val averageRating: Int,
+    val averageRating: Float,//Int,
     val canonicalVolumeLink: String,
     val categories: List<String>,
     val contentVersion: String,
