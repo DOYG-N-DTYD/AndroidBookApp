@@ -13,12 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.bookshelf.R
+import com.example.bookshelf.data.Book
 import com.example.bookshelf.ui.screens.HomeScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BooksApp(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onBookClicked: (Book) -> Unit
 ){
     val booksViewModel: BooksViewModel = viewModel(factory = BooksViewModel.Factory)
 
@@ -54,7 +56,12 @@ fun BooksApp(
                     .padding(it),
                 color = MaterialTheme.colors.background
             ){
-                HomeScreen(booksUiState = booksViewModel.booksUiState, retryAction = {booksViewModel::getBooks})
+                HomeScreen(
+                    booksUiState = booksViewModel.booksUiState,
+                    retryAction = {booksViewModel.getBooks()},
+                    modifier = modifier,
+                    onBookClicked
+                )
             }
     }
 }
