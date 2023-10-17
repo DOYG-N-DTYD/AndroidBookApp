@@ -2,7 +2,7 @@ package com.example.bookshelf.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.bookshelf.ui.theme.BooksUiState
+import com.example.bookshelf.ui.BooksUiState
 
 @Composable
 fun HomeScreen(

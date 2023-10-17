@@ -61,7 +61,7 @@ fun BooksCard(
                 )
             }
             AsyncImage(
-                modifier = modifier,
+                modifier = modifier.fillMaxWidth(),
                 model = ImageRequest.Builder(context = LocalContext.current)
                     .data(book.imageLink?.replace("http","https"))
                     .crossfade(true)

@@ -14,7 +14,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.bookshelf.R
 import com.example.bookshelf.ui.screens.HomeScreen
-import com.example.bookshelf.ui.theme.BooksViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
